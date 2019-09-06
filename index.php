@@ -85,7 +85,8 @@
 						<p></p>
 						<div class="mdui-typo">
                             <h3>Control</h3>
-							<h5>There is nothing at here...</h5>
+							<h5>For security, use the terminal gadget to operate.</h5>
+							<h5>python3 [program home directory]/pikms.py</h5>
 						</div>
 					</div>
 				</div>
