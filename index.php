@@ -32,8 +32,17 @@
 			<a href="#home" class="mdui-ripple get_value_class" onclick="window.location.hash='home'">
 				<label>HOME</label>
             </a>
-            <a href="#control" class="mdui-ripple get_value_class" onclick="window.location.hash='home'">
+            <a href="#status" class="mdui-ripple get_value_class" onclick="window.location.hash='status'">
+				<label>STATUS</label>
+            </a>
+			<a href="#control" class="mdui-ripple get_value_class" onclick="window.location.hash='control'">
 				<label>CONTROL</label>
+            </a>
+			<a href="#how" class="mdui-ripple get_value_class" onclick="window.location.hash='control'">
+				<label>HOW TO USE</label>
+            </a>
+			<a href="#help" class="mdui-ripple get_value_class" onclick="window.location.hash='control'">
+				<label>HELP</label>
             </a>
 		</div>
 
@@ -44,8 +53,25 @@
 						<p></p>
 						<div class="mdui-typo">
                             <h3>Pi-KMS</h3>
-							<h5>Status:<?php passthru("sh check/status.sh");?></h5>
+							<h5>Build a KMS Server on your Raspberry Pi easily!</h5>
+							<h5>Click on any of the options to get started.</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+        </div>
+
+		<div id="status" class="mdui-p-a-2">
+			<div class="mdui-panel" mdui-panel>
+				<div class="mdui-panel-item mdui-panel-item-open">
+					<div class="mdui-panel-item-body">
+						<p></p>
+						<div class="mdui-typo">
+                            <h3>Pi-KNS Status</h3>
+							<h5>Status:<?php passthru("sh service/checkstatus.sh");?></h5>
                             <h5>Hostname:<?php passthru("hostname");?></h5>
+							<h5>IP:<?php passthru("sh service/getip.sh");?></h5>
+							<h5>KMS Server PID:<?php passthru("sh service/getpid.sh");?></h5>
 						</div>
 					</div>
 				</div>
@@ -58,21 +84,8 @@
 					<div class="mdui-panel-item-body">
 						<p></p>
 						<div class="mdui-typo">
-                            <h3>Control Panel</h3>
-                            <h5>Status:<?php passthru("sh check/status.sh");?></h5>
-                            <div class="mdui-container">
-                                <button class="mdui-btn mdui-color-theme-accent mdui-ripple" mdui-dialog="{target: '#start'}">Start</button>
-                                <button class="mdui-btn mdui-color-theme-accent mdui-ripple" mdui-dialog="{target: '#exampleNoTitle'}">Stop</button>
-                                <a href="./bin/viewlog.php"><button class="mdui-btn mdui-btn-raised">View the log</button></a>
-                                <div class="mdui-dialog" id="start">
-                                    <div class="mdui-dialog-content">To prevent unauthorized operations, use the terminal to execute this script to start the KMS server: bash [program location]/bin/start.sh</div>
-                                    <div class="mdui-dialog-actions">
-                                    <button class="mdui-btn mdui-ripple" mdui-dialog-confirm>OK</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="./bin/stop.php"><button class="mdui-btn mdui-btn-raised">Stop</button></a>
-                            <a href="./bin/viewlog.php"><button class="mdui-btn mdui-btn-raised">View the log</button></a>
+                            <h3>Control</h3>
+							<h5>There is nothing at here...</h5>
 						</div>
 					</div>
 				</div>
