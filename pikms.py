@@ -11,6 +11,7 @@ if choose == "1":
     pidos = os.popen(r"bash service/getpid.sh", "r")
     pid = pidos.read()
     if pid == '':
+        os.system ('chmod u+x bin/vlmcsd-armv7el-uclibc-static')
         os.system ('bin/vlmcsd-armv7el-uclibc-static')
         print ("An attempt was made to run KMS Server, please check the KMS Server status.")
     else:
@@ -33,6 +34,7 @@ elif choose == "3":
     else:
         os.system('kill ' + pid)
         print ("The KMS Server is stopped.")
+        os.system ('chmod u+x bin/vlmcsd-armv7el-uclibc-static')
         os.system ('bin/vlmcsd-armv7el-uclibc-static')
         print ("An attempt was made to run KMS Server, please check the KMS Server status.")
 elif choose == "4":
