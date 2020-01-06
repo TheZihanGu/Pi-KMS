@@ -55,6 +55,7 @@
                             <h3>Pi-KMS</h3>
 							<h5>更容易地在你的树莓派上搭建一个KMS服务器！</h5>
 							<h5>请查看其他选项以开始。</h5>
+							<h5>想要在任何地方使用KMS服务器？查看<a href="https://kms.zihangu.com">TZG KMS服务器</a>
 						</div>
 					</div>
 				</div>
