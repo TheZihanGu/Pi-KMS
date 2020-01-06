@@ -1,2 +1,3 @@
 # Pi-KMS
-Build a KMS Server on your Raspberry Pi easily!
+更容易地在你的树莓派上搭建一个KMS服务器！    
+目前正在缓慢开发中，敬请期待（咕咕咕）...
