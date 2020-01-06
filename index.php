@@ -13,7 +13,7 @@
 		<header class="mdui-appbar mdui-appbar-fixed">
 			<div class="mdui-toolbar mdui-color-theme">
 				<span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"><i class="mdui-icon material-icons">menu</i></span>
-				<a href="https://github.com/TheZihanGu/Pi-KMS" target="_blank" class="mdui-typo-headline mdui-hidden-xs">Pi-KMS</a>
+				<a href="./" target="_blank" class="mdui-typo-headline mdui-hidden-xs">Pi-KMS</a>
 			</div>
 		</header>
 
@@ -22,7 +22,7 @@
 				<li class="mdui-list-item mdui-ripple">
 					<i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-light-blue">home</i>
 					<div class="mdui-list-item-content">
-						<a href="./" class="mdui-ripple">HOME</a>
+						<a href="./" class="mdui-ripple">主页</a>
 					</div>
 					</div>			
 				</li>
@@ -30,19 +30,19 @@
 
 		<div class="mdui-tab mdui-color-indigo" mdui-tab>
 			<a href="#home" class="mdui-ripple get_value_class" onclick="window.location.hash='home'">
-				<label>HOME</label>
+				<label>主页</label>
             </a>
             <a href="#status" class="mdui-ripple get_value_class" onclick="window.location.hash='status'">
-				<label>STATUS</label>
+				<label>状态</label>
             </a>
 			<a href="#control" class="mdui-ripple get_value_class" onclick="window.location.hash='control'">
-				<label>CONTROL</label>
+				<label>控制台</label>
             </a>
 			<a href="#how" class="mdui-ripple get_value_class" onclick="window.location.hash='control'">
-				<label>HOW TO USE</label>
+				<label>如何使用</label>
             </a>
 			<a href="#help" class="mdui-ripple get_value_class" onclick="window.location.hash='control'">
-				<label>HELP</label>
+				<label>帮助</label>
             </a>
 		</div>
 
@@ -53,8 +53,8 @@
 						<p></p>
 						<div class="mdui-typo">
                             <h3>Pi-KMS</h3>
-							<h5>Build a KMS Server on your Raspberry Pi easily!</h5>
-							<h5>Click on any of the options to get started.</h5>
+							<h5>更容易地在你的树莓派上搭建一个KMS服务器！</h5>
+							<h5>请查看其他选项以开始。</h5>
 						</div>
 					</div>
 				</div>
@@ -67,10 +67,10 @@
 					<div class="mdui-panel-item-body">
 						<p></p>
 						<div class="mdui-typo">
-                            <h3>Pi-KNS Status</h3>
-							<h5>Status:<?php passthru("sh service/checkstatus.sh");?></h5>
-                            <h5>Hostname:<?php passthru("hostname");?></h5>
-							<h5>IP:<?php passthru("sh service/getip.sh");?></h5>
+                            <h3>Pi-KMS 状态</h3>
+							<h5>状态:<?php passthru("sh service/checkstatus.sh");?></h5>
+                            <h5>主机名:<?php passthru("hostname");?></h5>
+							<h5>IP地址:<?php passthru("sh service/getip.sh");?></h5>
 							<h5>KMS Server PID:<?php passthru("sh service/getpid.sh");?></h5>
 						</div>
 					</div>
@@ -84,9 +84,9 @@
 					<div class="mdui-panel-item-body">
 						<p></p>
 						<div class="mdui-typo">
-                            <h3>Control</h3>
-							<h5>For security, use the terminal gadget to operate.</h5>
-							<h5>python3 [program home directory]/pikms.py</h5>
+                            <h3>控制台</h3>
+							<h5>为了安全，请使用Python程序进行控制。</h5>
+							<h5>python3 <?php passthru("pwd");?>/pikms.py</h5>
 						</div>
 					</div>
 				</div>
