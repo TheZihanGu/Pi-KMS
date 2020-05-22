@@ -1,0 +1,1 @@
+<?php passthru("bash script/getip.sh");?>
