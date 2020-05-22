@@ -7,7 +7,7 @@
 		<meta name="renderer" content="webkit">
 		<meta name="theme-color" content="#3F51B5" />
 		<title>Pi-KMS</title>
-		<link href="https://cdn.bootcss.com/mdui/0.4.2/css/mdui.min.css" rel="stylesheet">
+		<link href="./mdui/css/mdui.min.css" rel="stylesheet">
 	</head>
 	<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-pink">
 		<header class="mdui-appbar mdui-appbar-fixed">
@@ -53,9 +53,13 @@
 						<p></p>
 						<div class="mdui-typo">
                             <h3>Pi-KMS</h3>
-							<h5>更容易地在你的树莓派上搭建一个KMS服务器！</h5>
-							<h5>请查看其他选项以开始。</h5>
-							<h5>想要在任何地方使用KMS服务器？查看<a href="https://kms.zihangu.com">TZG KMS服务器</a>
+							<h5>快速在你的树莓派上搭建一个 KMS 服务器！</h5>
+							<h5>想使用公共 KMS 服务器？查看<a href="https://kms.zihangu.com">TZG KMS服务器</a>。</h5>
+							<h4>详细信息</h4>
+							<h5>状态<p id="statuskms">{{ message }}</p></h5>
+							<h5>KMS 服务器 IP<p id="serverip">{{ message }}</p></h5>
+							<h5>主机名<p id="hostname">{{ message }}</p></h5>
+							<h5>Vlmcsd 进程 PID<p id="vlmcsdpid">{{ message }}</p></h5>
 						</div>
 					</div>
 				</div>
@@ -68,11 +72,8 @@
 					<div class="mdui-panel-item-body">
 						<p></p>
 						<div class="mdui-typo">
-                            <h3>Pi-KMS 状态</h3>
-							<h5>状态:<?php passthru("sh service/checkstatus.sh");?></h5>
-                            <h5>主机名:<?php passthru("hostname");?></h5>
-							<h5>IP地址:<?php passthru("sh service/getip.sh");?></h5>
-							<h5>KMS Server PID:<?php passthru("sh service/getpid.sh");?></h5>
+							<h3>服务器状态</h3>
+							<iframe src="/bin/dashboard/index.php" width="880" height="450" seamless align="middle"></iframe>
 						</div>
 					</div>
 				</div>
@@ -87,13 +88,15 @@
 						<div class="mdui-typo">
                             <h3>控制台</h3>
 							<h5>为了安全，请使用Python程序进行控制。</h5>
-							<h5>python3 <?php passthru("pwd");?>/pikms.py</h5>
 						</div>
 					</div>
 				</div>
 			</div>
         </div>
-
 	</body>
-	<script src="https://cdn.bootcss.com/mdui/0.4.2/js/mdui.min.js"></script>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/clipboard.min.js"></script>
+	<script src="./js/vue.js"></script>
+	<script src="./mdui/js/mdui.min.js"></script>
+	<script src="./js/index.js"></script>
 </html>
