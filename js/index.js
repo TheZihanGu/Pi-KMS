@@ -66,3 +66,20 @@ httpRequest2.onreadystatechange = function () {
         hostname.message = hostnameresult;
     }
 }
+// 获取 Vlmcsd 进程 PID
+var vlmcsdpid = new Vue({
+    el: '#vlmcsdpid',
+    data: {
+        message: '正在获取...'
+    }
+})
+var httpRequest3 = new XMLHttpRequest();
+httpRequest3.open('GET', "./api/getpid.php", true);
+httpRequest3.send();
+httpRequest3.onreadystatechange = function () {
+    if (httpRequest3.readyState == 4 && httpRequest3.status == 200) {
+        var pidresult = httpRequest2.responseText;
+        console.log(pidresult);
+        vlmcsdpid.message = pidresult;
+    }
+}
