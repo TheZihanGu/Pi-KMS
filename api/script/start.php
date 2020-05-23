@@ -1,0 +1,1 @@
+<?php passthru("bash start.sh");?>

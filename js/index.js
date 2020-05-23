@@ -83,3 +83,25 @@ httpRequest3.onreadystatechange = function () {
         vlmcsdpid.message = pidresult;
     }
 }
+// 请求开启 KMS 服务
+function startKMS(){
+    var httpRequest4 = new XMLHttpRequest();
+    httpRequest4.open('GET', "./api/script/start.php", true);
+    httpRequest4.send();
+    httpRequest4.onreadystatechange = function () {
+        if (httpRequest4.readyState == 4 && httpRequest4.status == 200) {
+            var startresult = httpRequest4.responseText;
+            console.log(startresult);
+            if(startresult != ""){
+                mdui.snackbar({
+                    message: '在启动时出现了一些问题。请查看浏览器 Console 以获取更多信息。'
+                });
+            }
+            else{
+                mdui.snackbar({
+                    message: '请求成功，刷新看一下状态吧=-='
+                });
+            }
+        }
+    }
+}
