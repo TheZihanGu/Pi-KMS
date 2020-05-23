@@ -78,7 +78,7 @@ httpRequest3.open('GET', "./api/getpid.php", true);
 httpRequest3.send();
 httpRequest3.onreadystatechange = function () {
     if (httpRequest3.readyState == 4 && httpRequest3.status == 200) {
-        var pidresult = httpRequest2.responseText;
+        var pidresult = httpRequest3.responseText;
         console.log(pidresult);
         vlmcsdpid.message = pidresult;
     }
